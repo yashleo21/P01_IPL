@@ -125,7 +125,7 @@ public class Main {
 
             for (Match match : matchList) {
 
-                System.out.println(match);
+               // System.out.println(match);
 
                 String season = match.getSeason();
                 String winner = match.getWinner();
@@ -181,11 +181,13 @@ public class Main {
             Object[] keys_queryOne = queryOne.keySet().toArray();
             Arrays.sort(keys_queryOne, Collections.reverseOrder());
 
+            System.out.println("\n ----MATCHES PLAYED EVERY YEAR----");
+
             for (Object key : keys_queryOne) {
                 System.out.println(MessageFormat.format("YEAR {0} : MATCHES {1}", key, queryOne.get(key)));
             }
 
-            System.out.println();
+            System.out.println("\n <------- YEAR WISE TEAM WINS --------->");
 
             for (Object key : keys_queryOne) {
 
@@ -276,7 +278,7 @@ public class Main {
             System.out.println("List is empty (Query 4)");
         }
 
-        System.out.println("\n------ TOP 10 ECONOMIES----------");
+        System.out.println("\n------ YEAR 2015 TOP 10 ECONOMIES----------");
         for (String key: queryFour.keySet()) {
             ArrayList<Integer> tempList = queryFour.get(key);
             double overs = tempList.get(0)/6;
